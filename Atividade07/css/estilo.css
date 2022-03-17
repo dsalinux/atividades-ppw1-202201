@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+}
+.menu {
+    list-style: none;
+    background-color: #251351;
+    padding: 0;
+    margin: 0;
+    position: sticky;
+    top: 0;
+}
+.menu li {
+    display: inline-block;
+}
+.menu li a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+}
+.menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.menu li ul {
+    position: absolute;
+    background-color: #251351;
+    padding: 0;
+    width: 200px;
+    display: none;
+    transition: 1s;
+    top: 50px;
+}
+.menu li:hover ul {
+    display: block;
+}
+.menu li ul li {
+    display: block;
+}
+
+p {
+    font-size: 2em;
+}
+
+.banner {
+    position: fixed;
+    width: 400px;
+    height: 300px;
+    background-color: #2255ff;
+    top: 50%;
+    left: 50%;
+    margin-left: -200px;
+    margin-top: -150px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px black;
+    padding: 20px;
+}
+.banner h2 {
+    text-align: center;
+    color: #F00;
+    font-weight: bold;
+    font-size: 2.5em;
+}
+.banner .descricao {
+    text-align: justify;
+}
+.banner .valor {
+    background-color: #000;
+    color: limegreen;
+    font-size: 3em;
+    text-align: right;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.banner label {
+    font-size: 1.5em;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+#fechar {
+    display: none;
+}
+
+#fechar:checked + .banner {
+    display: none;
+}

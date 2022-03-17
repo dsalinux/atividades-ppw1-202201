@@ -22,12 +22,12 @@ body, html {
     color: black;
     line-height: 50px;
     padding: 0 15px;
-    transition: background 600ms;
+    transition: background 0.3s;
 }
 
 .menu li a:hover {
     background: #f0f0f0;
 }
 .menu li a:active {
-    background: linear-gradient(#eee,#fff);
+    background: #fff;
 }
