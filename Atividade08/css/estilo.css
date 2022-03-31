@@ -1,0 +1,10 @@
+.login {
+    background-color: green;
+    width: 300px;
+    margin: 20px auto;
+    overflow: hidden;
+    height: 120px;
+}
+#txtLogin {
+    width: 500px;
+}
