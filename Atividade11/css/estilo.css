@@ -1,0 +1,23 @@
+.caixa1 {
+    width: 200px;
+    height: 200px;
+    margin: 50px;
+    background-color: lightblue;
+    box-shadow: 0px 0px 10px 3px violet,
+                0px 0px 10px 6px red,
+                0px 0px 10px 9px orange,
+                0px 0px 10px 12px yellow,
+                0px 0px 10px 15px green,
+                0px 0px 10px 18px cyan,
+                0px 0px 10px 21px blue
+    ;
+}
+.caixa2 {
+    width: 200px;
+    height: 200px;
+    margin: 50px;
+    background-color: lightblue;
+    font-size: 32px;
+    text-shadow: -1px -1px 0px white, 1px 1px 0px black;
+    color: darkgray;
+}
