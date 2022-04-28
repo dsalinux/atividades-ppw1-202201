@@ -1,0 +1,127 @@
+html, body {
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+* {
+    box-sizing: border-box;
+}
+.menu {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    display: flex;
+}
+.menu a {
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 0.3s;
+    border: 1px solid red;
+}
+.menu a:hover {
+    background: red;
+    color: white;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-family: arial;
+    padding: 20px;
+}
+.btn {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    width: calc(100% - 16px);
+    font-size: 18px;
+}
+.btn.btn-primary {
+    background-color: #00F;
+}
+
+.container {
+    padding: 10px;
+    height: calc(100vh - 20px);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-evenly;
+    align-content: flex-start;
+}
+.container .card {
+    flex: 1;
+}
+
+.container-texto {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+}
+.container-texto div {
+    border: 1px solid red;
+    flex-basis: 15%;
+    flex-grow: 1;
+}
+
+.container-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container-login .login {
+    width: 350px;
+    border: 1px solid #023E8A;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+}
+.container-login .login button {
+    padding: 10px;
+    font-size: 1.1em;
+    border: 1px solid #023E8A;
+    background-color: #0466C8;
+    color: #fff;
+    grid-column: 1 / -1;
+}
+.container-login .login button:hover, .container-login .login button:focus {
+    background-color: #023E8A;
+    outline: none;
+}
+.container-login .login input {
+    border: 1px solid #023E8A;
+    padding: 10px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+.container-login .login input:hover, .container-login .login input:focus {
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
+    border-color: #0466C8;
+}
+.container-layout div {
+    border: 1px solid red;
+}
+.container-layout {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+}
+.container-layout .conteudo {
+    flex: 1;
+    display: flex;
+}
+.container-layout .conteudo .corpo {
+    flex: 1;
+}

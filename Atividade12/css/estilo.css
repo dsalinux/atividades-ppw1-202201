@@ -55,7 +55,8 @@ footer {
 }
 
 .float-intro img {
-  
+  float: left;
+  margin-right: 20px;
 }
 
 .float-multiple {
@@ -66,37 +67,38 @@ footer {
   width: 150px;
   background: pink;
   border: 2px solid red;
+  float: left;
 }
 
-/* .clearfix::after {
+.clearfix::after {
   display: table;
   content: "";
   clear: both;
-} */
+}
 
 .float-layout-one {
   background: #a9e5bb;
 }
 .float-layout-one .col {
-  /* width: 30%; */
-  /* margin-right: 3%;
-  float: left; */
+  width: 30%;
+  margin-right: 3%;
+  float: left;
 }
 
 .float-layout-two .sidebar--left {
-  /* width: 25%;
-  float: left; */
+  width: 25%;
+  float: left;
 }
 .float-layout-two .main {
-  /* width: 50%;
-  float: left; */
+  width: 50%;
+  float: left;
 }
 .float-layout-two .sidebar--right {
-  /* width: 25%;
-  float: right; */
+  width: 25%;
+  float: right;
 }
 .float-layout-two footer {
-  /* clear: both; */
+  clear: both;
 }
 
 .float-layout-three {
@@ -105,7 +107,7 @@ footer {
   
 }
 .float-layout-three .card {
-    /* float: left; */
+    float: left;
 }
 
 .flex-layout-one .flex-parent {
@@ -118,9 +120,11 @@ footer {
 .flex-layout-two .flex-parent {
   display: flex;
   flex-wrap: wrap;
+  
 }
 .flex-layout-two .flex-parent .card {
   width: 20%;
+  flex-shrink: 1;
 }
 
 .grid-layout-one .card {
@@ -134,11 +138,11 @@ footer {
 
 .grid-layout-two {
   display: grid;
-  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-columns: 2fr 5fr 2fr;
 }
 .grid-layout-two .title {
-  grid-column: 1/-1;
+  grid-column: 1 / -1;
 }
 .grid-layout-two footer {
-  grid-column: 1/ -1;
+  grid-column: 1 / -1;
 }
