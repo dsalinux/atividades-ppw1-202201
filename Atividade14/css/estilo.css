@@ -1,0 +1,25 @@
+:root {
+    --cor-principal: rgb(255, 187, 0);
+    --tamanho-texto: 1rem;
+}
+.p1 {
+    color: var(--cor-principal);
+    font-size: var(--tamanho-texto);
+}
+.p2 {
+    color: var(--cor-principal);
+    font-size: var(--tamanho-texto);
+}
+.p3 {
+    color: var(--cor-principal);
+    font-size: var(--tamanho-texto);
+}
+::selection {
+    background-color: var(--cor-principal);
+    color: white;
+}
+
+.p3::selection {
+    background-color: black;
+    color: white;
+}
