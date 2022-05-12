@@ -1,0 +1,89 @@
+html, body {
+    margin: 0;
+    padding:0;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+}
+.container-flex {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.container-flex .menu {
+    flex: 0;
+}
+.container-flex .conteudo {
+    flex: 1;
+}
+.container-flex .rodape {
+    flex: 0;
+}
+.menu  {
+    background-color: #4466a4;
+    padding: 10px;
+    display: flex;
+}
+.menu img {
+    border-radius: 5px;
+}
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu ul li {
+    display: inline-block;
+}
+.menu ul li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 0 20px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 5px;
+}
+.menu ul li a:hover {
+    color: #4466a4;
+    background: #fff;
+    text-decoration: none;
+}
+
+.banner {
+    display: block;
+    width: 100%;
+    height: 20vh;
+    background: url('https://picsum.photos/id/1000/1600/600');
+    background-size: cover;
+    background-position: center;
+}
+.cursos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    padding: 20px;
+}
+.cursos .curso {
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 0 5px rgba(0,0,0,0.4);
+}
+
+.rodape {
+    background-color: #4466a4;
+    padding: 10px;
+}
+
+.sobre {
+    padding: 20px;
+}
+.sobre img, .sobre p { 
+    float: left;
+}
+.sobre p {
+    text-align: justify;
+    font-size: 1.5em;
+}
+.sobre img {
+    padding: 0 20px 20px 0;
+}
