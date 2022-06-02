@@ -1,0 +1,90 @@
+:root {
+    --tamanho: 300px;
+}
+
+body {
+    background: #111;
+    margin: 0;
+    padding: 0;
+}
+.container-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.relogio {
+    position: relative;
+}
+
+.relogio .marcador{
+    width: var(--tamanho);
+    height: var(--tamanho);
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0px 0px 10px rgba(255,255,0,0.5) inset, 0px 0px 15px rgba(255,255,0,0.5);
+}
+.numeros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--tamanho);
+    color: white;
+    text-shadow: 0 0 6px rgba(255,255,0,0.5);
+}
+.numero {
+    font-size: calc(var(--tamanho) * 0.1);
+    font-weight: bold;
+    position: absolute;
+    height: var(--tamanho);
+    transform: rotateZ(calc(30deg * var(--n)));
+}
+.ponteiros {
+    position: absolute;
+    top: 0;
+    width: var(--tamanho);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(var(--tamanho) + 10px);
+}
+.centro {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgb(44, 50, 110);
+    z-index: 10;
+}
+
+.ponteiro-hora {
+    width: 6px;
+    height: calc(var(--tamanho) - 33%);
+    border-radius: 50%;
+    position: absolute;
+    background: linear-gradient(0deg, transparent 50%, rgb(83, 97, 255) 50%);
+    animation: girarPonteiro 4s linear infinite;
+}
+.ponteiro-hora.efeito {
+    filter: blur(8px);
+    background: linear-gradient(0deg, transparent 50%, rgb(0, 0, 255) 50%);
+}
+.ponteiro-minuto {
+    width: 5px;
+    height: calc(var(--tamanho) - 45%);
+    border-radius: 50%;
+    position: absolute;
+    background: linear-gradient(0deg, transparent 50%, rgb(205, 87, 255) 50%);
+    animation: girarPonteiro 48s linear infinite;
+}
+.ponteiro-minuto.efeito {
+    filter: blur(8px);
+    background: linear-gradient(0deg, transparent 50%, rgb(179, 0, 255) 50%);
+}
+@keyframes girarPonteiro {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}

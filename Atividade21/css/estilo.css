@@ -1,0 +1,36 @@
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tabuleiro {
+    background-color: #999;
+    padding: 10px;
+    width: 500px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.posicao {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.posicao .icone {
+    font-size: 50px;
+}
+.posicao .icone.fa-close {
+    color: #f00;
+}
+.posicao .icone.fa-circle {
+    color: #0f0;
+}

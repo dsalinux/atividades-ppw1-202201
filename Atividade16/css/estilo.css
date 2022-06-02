@@ -79,6 +79,7 @@ html, body {
 }
 .sobre img, .sobre p { 
     float: left;
+    display: inline;
 }
 .sobre p {
     text-align: justify;

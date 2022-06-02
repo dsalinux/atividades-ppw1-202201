@@ -1,0 +1,1 @@
+Clientes.where(x => x.valor > 0).toList();

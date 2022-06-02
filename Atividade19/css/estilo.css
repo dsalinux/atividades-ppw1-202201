@@ -1,0 +1,93 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+.cabecalho {
+    background-color: #666;
+    padding: 20px;
+}
+
+.rodape {
+    background-color: #666;
+    padding: 20px;
+    text-align: center;
+}
+
+.container-flex {
+    flex: 1;
+    display: flex;
+}
+.menu-lateral {
+    width: 200px;
+    flex-basis: 200px;
+    background-color: #999;
+    z-index: 100;
+    transition: left 0.5s;
+    left: 0;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh;
+    display: none;
+}
+#abrir-menu {
+    display: none;
+}
+.abrirmenu {
+    float: right;
+    z-index: 110;
+    position: relative;
+}
+.conteudo {
+    flex: 1;
+    padding: 20px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1em;
+}
+.card {
+    border: 1px solid #999;
+    flex-basis: 200px;
+    width: 30%;
+    height: 200px;
+}
+
+@media screen and (max-width: 900px) {
+    .card {
+        flex-basis: 45%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .card {
+        flex-basis: 100%;
+    }
+    .menu-lateral {
+        position: absolute;
+        top: 0;
+        left: -200px;
+        height: 100vh;
+    }
+    #abrir-menu:checked + .menu-lateral {
+        left: 0;
+    }
+    #abrir-menu:checked + .overlay {
+        display: block;
+        z-index: 9;
+    }
+}

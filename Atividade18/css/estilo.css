@@ -1,0 +1,38 @@
+body {
+    background-color: #ffbaba;
+}
+@media screen and (max-width: 1200px) {
+    body {
+        background-color: #f68b8b;
+    }
+    p {
+        font-size: 3em;
+    }
+ }
+ @media screen and (max-width: 900px) {
+    body {
+        background-color: #f6f68b;
+    }
+    p {
+        font-size: 2.5em;
+    }
+ }
+ @media screen and (max-width: 700px) {
+    body {
+        background-color: #0efd82;
+    }
+    p {
+        font-size: 2em;
+    }
+}
+@media screen and (max-width: 600px) {
+    body {
+        background-color: #8b8ef6;
+    }
+    p {
+        font-size: 1.5em;
+    }
+}
+
+
+

@@ -1,0 +1,80 @@
+.bola {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: red;
+    animation-name: bolinha;
+    animation-duration: 6s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+}
+.container-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.spinner {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border-top: 10px solid black;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    animation: spinnerAnime 1s infinite linear;
+}
+@keyframes spinnerAnime{
+    0% {
+        transform: rotate(0deg);
+        border-top-color: blue;
+    }
+    20% {
+        border-top-color: green;
+    }
+    40% {
+        border-top-color: yellow;
+    }
+    60% {
+        border-top-color: orange;
+    }
+    80% {
+        border-top-color: red;
+    }
+    100% {
+        transform: rotate(360deg);
+        border-top-color: blue;
+    }
+}
+
+@keyframes bolinha {
+    0% {
+        top: 0;
+        left: 0;
+        background-color: black;
+    }
+    25% {
+        top: 0;
+        left: calc(100% - 200px);
+        background-color: red;
+    }
+    50% {
+        left: calc(100% - 200px); 
+        top: calc(100% - 200px);
+        background-color: blue;
+    }
+    75% { 
+        left: 0; 
+        top: calc(100% - 200px);
+        background-color: green;
+    }
+    100% {
+        left: 0;
+        top: 0;
+        background-color: black;
+    }
+}
