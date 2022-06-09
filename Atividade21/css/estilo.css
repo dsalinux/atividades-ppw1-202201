@@ -1,3 +1,8 @@
+:root {
+    --tamanho-tabuleiro: 500px;
+    --espacao-entre-pecas: 10px;
+}
+
 body {
     height: 100vh;
     margin: 0;
@@ -9,11 +14,13 @@ body {
 .tabuleiro {
     background-color: #999;
     padding: 10px;
-    width: 500px;
-    height: 500px;
+    width: var(--tamanho-tabuleiro);
+    height: var(--tamanho-tabuleiro);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: var(--espacao-entre-pecas);
+    position: relative;
 }
 
 .posicao {
@@ -32,5 +39,115 @@ body {
     color: #f00;
 }
 .posicao .icone.fa-circle {
+    color: #0f0;
+}
+.traco {
+    position: absolute;
+    width: 0;
+    height: 10px;
+    background-color: #0f0;
+    left: var(--espacao-entre-pecas);
+    transform-origin: 0%;
+    border-radius: 10px;
+}
+@keyframes animacaoTraco {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: var(--tamanho-tabuleiro);
+    }
+
+}
+.traco.p {
+    display: block;
+    animation: animacaoTraco 1s linear forwards;
+}
+.traco.p1 {
+    top: 16.5%;
+}
+.traco.p2 {
+    top: 50%;
+}
+.traco.p3 {
+    top: calc(82.5% - 5px);
+}
+.traco.p4 {
+    transform: rotate(90deg);
+    top: calc(var(--espacao-entre-pecas) / 2);
+    left: 16.5%;
+}
+.traco.p5 {
+    transform: rotate(90deg);
+    top: calc(var(--espacao-entre-pecas) / 2);
+    left: 50%;
+}
+.traco.p6 {
+    transform: rotate(90deg);
+    top: calc(var(--espacao-entre-pecas) / 2);
+    left: 82.5%;
+}
+.traco.p7 {
+    transform: rotate(45deg) scale(1.15, 1);
+    top: 8%;
+    left: 8%;
+}
+.traco.p8 {
+    transform: rotate(135deg) scale(1.15, 1);
+    top: 8%;
+    left: 92%;
+    
+}
+.overlay {
+    background: repeating-conic-gradient(rgba(255,255,0, 0.5) 0 2%, rgba(0,0,0,0.5) 2% 4%);
+    /* background-color: rgba(0, 0, 0, 0.6); */
+    position: fixed;
+    height: 200vh;
+    width: 200vw;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    backdrop-filter: blur(5px);
+    opacity: 0;
+}
+@keyframes girar {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.overlay.ganhou {
+    display: flex;
+    animation: animacaoGanhou 1s 1s ease-in-out forwards,
+    girar 25s linear infinite;
+}
+@keyframes animacaoGanhou {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+    
+.overlay .ganhador {
+    display: flex;
+    gap: 20px;
+    animation: girar 25s linear infinite reverse;
+}
+.overlay .ganhador i {
+    font-size: 100px;
+    text-shadow: 3px 3px 20px #000, 3px 3px 20px #000;
+}
+.overlay .ganhador h1 {
+    font-size: 50px;
+    text-shadow: 3px 3px 20px #000, 3px 3px 20px #000;
+}
+.overlay .ganhador i.fa-close, .overlay .ganhador i.fa-close + h1 {
+    color: #f00;
+}
+.overlay .ganhador i.fa-circle, .overlay .ganhador i.fa-circle + h1 {
     color: #0f0;
 }

@@ -1,0 +1,52 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculadora {
+    width: 300px;
+    height: 400px;
+    background-color: #bbb;
+    border-radius: 20px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+.painel {
+    height: 70px;
+    width: 100%;
+    background-color: darkolivegreen;
+    margin-bottom: 20px;
+}
+.botoes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px;
+    flex: 1;
+}
+.botoes a {
+    background-color: #666;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.btn-igual {
+    grid-row-start: 4;
+    grid-row-end: 6;
+    grid-column-start: 4;
+}
+.btn-c {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.btn-0 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
