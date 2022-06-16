@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -16,12 +17,28 @@ body, html {
     display: flex;
     flex-direction: column;
 }
+
 .painel {
-    height: 70px;
+    height: 80px;
     width: 100%;
     background-color: darkolivegreen;
     margin-bottom: 20px;
+    font-family: 'LCDMono2 Bold', monospace;
+    color: rgba(0, 0, 0, 0.6);
+    text-shadow: 4px 4px 3px rgb(0 0 0 / 30%);
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: right;
 }
+
+.painel .operacao {
+    font-size: 1.5rem;
+}
+
+.painel .resultado {
+    font-size: 2.5rem;
+}
+
 .botoes {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -29,12 +46,16 @@ body, html {
     gap: 10px;
     flex: 1;
 }
+
 .botoes a {
     background-color: #666;
     text-decoration: none;
     color: black;
     text-align: center;
     font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn-igual {
@@ -42,11 +63,32 @@ body, html {
     grid-row-end: 6;
     grid-column-start: 4;
 }
+
 .btn-c {
     grid-column-start: 1;
     grid-column-end: 3;
 }
+
 .btn-0 {
     grid-column-start: 1;
     grid-column-end: 3;
+}
+
+#tema {
+    background-color: rgb(28, 32, 39);
+    color: white;
+    padding: 10px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+#tema > option:hover {
+    box-shadow: 0 0 10px 100px #a86218 inset;
+}
+
+@font-face {
+    font-family: 'LCDMono2 Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('LCDMono2 Bold'), url('../fonts/LCDM2B__.woff') format('woff');
 }

@@ -12,7 +12,7 @@ body {
 }
 
 .tabuleiro {
-    background-color: #999;
+    background: repeating-conic-gradient( rgb(100, 91, 83) 0%, rgb(235, 82, 82) 18.23%, rgb(247, 143, 47) 34.37%, rgb(244, 193, 81) 48.96%, rgb(82, 187, 118) 66.15%, rgb(38, 165, 215) 82.29%, rgb(224, 105, 183) 100%);
     padding: 10px;
     width: var(--tamanho-tabuleiro);
     height: var(--tamanho-tabuleiro);
@@ -99,29 +99,27 @@ body {
     
 }
 .overlay {
-    background: repeating-conic-gradient(rgba(255,255,0, 0.5) 0 2%, rgba(0,0,0,0.5) 2% 4%);
+    /* background: repeating-conic-gradient(rgba(255,255,0, 0.5) 0 2%, rgba(0,0,0,0.5) 2% 4%); */
     /* background-color: rgba(0, 0, 0, 0.6); */
+    background: conic-gradient( rgb(224, 105, 183) 0%, rgb(235, 82, 82) 18.23%, rgb(247, 143, 47) 34.37%, rgb(244, 193, 81) 48.96%, rgb(82, 187, 118) 66.15%, rgb(38, 165, 215) 82.29%, rgb(224, 105, 183) 100%);
+    background-size: 100%;
     position: fixed;
-    height: 200vh;
+    height: 200vw;
     width: 200vw;
     align-items: center;
     justify-content: center;
     display: none;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
     opacity: 0;
+    cursor: pointer;
 }
 @keyframes girar {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+   
 }
 .overlay.ganhou {
     display: flex;
     animation: animacaoGanhou 1s 1s ease-in-out forwards,
-    girar 25s linear infinite;
+    girar 5s linear infinite;
 }
 @keyframes animacaoGanhou {
     0% {
@@ -135,7 +133,7 @@ body {
 .overlay .ganhador {
     display: flex;
     gap: 20px;
-    animation: girar 25s linear infinite reverse;
+    /* animation: girar 5s linear infinite reverse; */
 }
 .overlay .ganhador i {
     font-size: 100px;
