@@ -71,5 +71,19 @@ function atulizarPainel() {
     }
     document.querySelector(".painel .resultado").innerHTML = result;
     document.querySelector(".painel .operacao").innerHTML = texto;
-    ;
+
 }
+
+document.querySelector("#tema").addEventListener("change", () => {
+    let tema = document.querySelector("#tema");
+    tema.querySelectorAll("option").forEach((op) => {
+        try {
+            document.querySelector(".calculadora").classList.remove(op.value);
+        } catch(e) {
+
+        }
+    });
+    document.querySelector(".calculadora").classList.add(tema.value);
+    localStorage.tema = tema.value;
+});
+document.querySelector(".calculadora").classList.add(localStorage.tema?localStorage.tema:'tema-2');
